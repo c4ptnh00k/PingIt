@@ -20,13 +20,15 @@ namespace PingIt
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PingItEntities db = new PingItEntities();
+            var db = new PingItEntities();
 
-            CraddlePoint newCraddlePoint = new CraddlePoint();
-            newCraddlePoint.IpAddress = txtIp.Text;
-            newCraddlePoint.Organization = txtOrganization.Text;
-            newCraddlePoint.VehicleId = txtVehicle.Text;
-            newCraddlePoint.Provider = txtProvider.Text;
+            var newCraddlePoint = new CraddlePoint
+            {
+                IpAddress = txtIp.Text,
+                Organization = txtOrganization.Text,
+                VehicleId = txtVehicle.Text,
+                Provider = txtProvider.Text
+            };
             db.CraddlePoints.Add(newCraddlePoint);
             db.SaveChanges();
             
