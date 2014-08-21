@@ -18,6 +18,7 @@ namespace PingIt
         public PingItEntities()
             : base("name=PingItEntities")
         {
+
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
